@@ -1,0 +1,10 @@
+from multiprocessing import Pool
+
+pool = Pool(8)
+
+def mult(x):
+    return x*2
+
+listing = list(range(100))
+results = pool.map(mult, listing)
+
